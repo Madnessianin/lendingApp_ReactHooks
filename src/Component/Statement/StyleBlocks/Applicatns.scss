@@ -1,0 +1,19 @@
+
+
+.apl_item {
+    position: relative;
+    top: -10px;
+    left: 0;
+
+    &--last {
+        top: -5px;
+    }
+}
+
+.apl_des {
+    position: relative;
+    top: 0;
+    left: 20px;
+    font-size: 18px;
+    line-height: 24px;
+}

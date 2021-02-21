@@ -1,0 +1,50 @@
+.check,
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    
+    border-radius: 50%;
+}
+
+.check {
+    background: #1BC400;
+}
+.number {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #fff;
+    background: #0061D9;
+}
+
+.dataform {
+    margin-bottom: 24px;
+    padding: 16px 192px 0 16px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.dataform_icon {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.dataform_inner {
+    position: relative;
+    top: -50px;
+    left: 82px;
+    width: 88%;
+}
+
+.dataform_title {
+    margin: 7px 0 24px 0;
+    font-size: 21px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #3B4256;
+}
