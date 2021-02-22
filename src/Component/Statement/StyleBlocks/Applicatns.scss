@@ -4,9 +4,20 @@
     position: relative;
     top: -10px;
     left: 0;
+    padding: 0 18px;
+    margin-bottom: 16px;
+    background: #F5F5F7;
+    border: 2px solid #F5F5F7;
+    transition: border-color .2s linear, background .2s linear;
+    border-radius: 4px;
 
     &--last {
         top: -5px;
+    }
+
+    &:hover {
+        border-color: #0061D9;
+        background: #fff;
     }
 }
 

@@ -29,7 +29,7 @@ const dataForm = (Component) => (props) => {
     }, [!props.visibleMode])
 
     return (
-        <div className="dataform" style={checkMode ? { height: '80px'} : {}}>
+        <div className="dataform" style={checkMode ? { height: '80px'} : {height: `${props.height}`}}>
             <div className="dataform_icon">
                 {checkMode ? <Check /> : <Number number={props.number} />}
             </div>

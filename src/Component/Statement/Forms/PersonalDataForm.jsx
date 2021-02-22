@@ -15,7 +15,8 @@ const PersonalDataForm = dataForm((props) => {
     }
 
     const styleInput = {
-        height: '48px'
+        height: '48px',
+        width: '100%'
     }
     const layout = {
         labelCol: {
@@ -96,60 +97,69 @@ const PersonalDataForm = dataForm((props) => {
                 </div>
 
                 <div className="personal_passport">
-                    <div className="personal_passport_item">
+                    <div className="personal_passport_item personal_passport_item--first">
                         <Divider orientation="left">Документ, удостоверяющий личность</Divider>
                     </div>
-                    <div className="personal_passport_item">
+                    <div className="personal_passport_item personal_passport_item--second">
                         <Form.Item name="document"
                                 label="Документ"
                                 initialValue={"Паспорт"}>
                             <Input style={styleInput} disabled />
                         </Form.Item>
                     </div>
-                    <div className="personal_passport_item">
+                    <div className="personal_passport_item personal_passport_item--third">
                         <Row>
-                            <Col span={10}>
+                            <Col span={11}>
                                 <Form.Item name="series"
                                             label="Серия"
                                             rules={[
                                             {
                                                 required: true,
-                                                message: 'Пожалуйста, укажите свой серию паспорта!',
+                                                message: 'Пожалуйста, укажите серию паспорта!',
                                             }, ]}>
                                     <Input style={styleInput} />
                                 </Form.Item>
                             </Col>
-                            <Col span={14}>
+                            <div className="personal_pasport_divider">
+                                <Divider type="vertical" />
+                            </div>
+                            <Col span={12}>
                                 <Form.Item name="number"
                                             label="Номер"
                                             rules={[
                                             {
                                                 required: true,
-                                                message: 'Пожалуйста, укажите свой номер паспорта!',
+                                                message: 'Пожалуйста, укажите номер паспорта!',
                                             }, ]}>
                                     <Input style={styleInput} />
                                 </Form.Item>
                             </Col> 
                         </Row>
                     </div>
-                    <div className="personal_passport_item">
+                    <div className="personal_passport_item personal_passport_item--four">
                         <Divider orientation="left" plain>Дата выдачи</Divider>
                     </div>
-                    <div className="personal_passport_item">
+                    <div className="personal_passport_item personal_passport_item--five">
                         <Row>
-                            <Col span={6}>
+                            <Col span={7}>
                                 <Form.Item name="day"
                                         label="День">
-                                    <InputNumber style={styleInput} min={1} max={31} defaultValue={3} />
+                                    <InputNumber style={styleInput} size="large" min={1} max={31} defaultValue={3} />
                                 </Form.Item>  
                             </Col>
-                            <Col span={6}>
+                            <div className="personal_pasport_divider">
+                                <Divider type="vertical" />
+                            </div>
+                            <Col span={7}>
                                 <Form.Item name="mounth"
                                         label="Месяц">
                                     <InputNumber style={styleInput} min={1} max={12} defaultValue={5} />
                                 </Form.Item> 
                             </Col>
-                            <Col span={10}>
+                            <div className="personal_pasport_divider">
+                                <Divider type="vertical" />
+                            </div>
+                            <Col span={8}>
                                 <Form.Item name="year"
                                         label="Год">
                                     <InputNumber style={styleInput} min={1991} max={2020} defaultValue={2018} />
@@ -158,11 +168,14 @@ const PersonalDataForm = dataForm((props) => {
                         </Row>
                     </div> 
                 </div>
-                               
+
+                <div className="personal_btn">
+                    <Form.Item>
+                        <Button style={styleBtn} type="primary" htmlType="submit">Продолжить</Button>
+                    </Form.Item>
+                </div>              
                     
-                <Form.Item>
-                    <Button style={styleBtn} type="primary" htmlType="submit">Продолжить</Button>
-                </Form.Item>
+                
             </Form>
         </div>  
     )

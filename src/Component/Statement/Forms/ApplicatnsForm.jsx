@@ -13,6 +13,7 @@ const ApplicatnsForm = dataForm((props) => {
     const radioStyle = {
         display: 'flex',
         alignItems: 'center',
+        width: '560px',
         height: '80px',
         lineHeight: '24px'
     };
@@ -21,7 +22,10 @@ const ApplicatnsForm = dataForm((props) => {
         width: '100%',
         height: '48px',
         fontSize: '18px',
-        textAline: 'center'
+        textAline: 'center',
+        position: 'relative',
+        top: '-25px',
+        left: '0'
     }
 
     return (

@@ -25,8 +25,16 @@
     padding: 16px 192px 0 16px;
     background: #fff;
     border-radius: 4px;
+    transition: height .5s linear;
 }
-
+.point {
+    height: 3px;
+    width: 3px;
+    background: transparent;
+    border: 2px solid #000;
+    border-radius: 50%;
+    color: #000;
+}
 .dataform_icon {
     position: relative;
     top: 0;

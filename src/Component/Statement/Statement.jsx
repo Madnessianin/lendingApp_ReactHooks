@@ -5,20 +5,25 @@ import './Statement.scss'
 
 import ApplicatnsForm from './Forms/ApplicatnsForm'
 import PersonalDataForm from './Forms/PersonalDataForm'
+import ConsentForm from './Forms/ConsentForm'
 
 
 const Statement = () => {
 
     const [visibleModeFormOne, setVisibleModeFormOne] = useState(true)
     const [visibleModeFormTwo, setVisibleModeFormTwo] = useState(false)
+    const [visibleModeFormThree, setVisibleModeFormThree] = useState(false)
 
-    const onSubmitFormOne = () => {
+    const onSubmitFormOne = (data) => {
         setVisibleModeFormOne(false)
         setVisibleModeFormTwo(true)
     }
     const onSubmitFormTwo = (data) => {
         setVisibleModeFormTwo(false)
-        console.log(data)
+        setVisibleModeFormThree(true)
+    }
+    const onSubmitFormThree = (data) => {
+        setVisibleModeFormThree(false)
     }
 
     return (
@@ -28,11 +33,18 @@ const Statement = () => {
                 <ApplicatnsForm title="Выбор заявителя"
                                 number="1"
                                 onSubmit={onSubmitFormOne}
-                                visibleMode={visibleModeFormOne} />
+                                visibleMode={visibleModeFormOne}
+                                height={'350px'} />
                 <PersonalDataForm title="Данные заявителя"
                                   number="2"
                                   onSubmit={onSubmitFormTwo}
-                                  visibleMode={visibleModeFormTwo} />
+                                  visibleMode={visibleModeFormTwo}
+                                  height={'1050px'} />
+                <ConsentForm title="Согласие"
+                             number="3"
+                             onSubmit={onSubmitFormThree}
+                             visibleMode={visibleModeFormThree}
+                             height={'880px'} />
             </div>
             
         </div>
