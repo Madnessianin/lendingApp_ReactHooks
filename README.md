@@ -11,8 +11,7 @@
 
 ## Для запуска проэкта на своем компьютере, необходимо установить следующие инструменты:
 
-1)[NodeJS](https://nodejs.org/en/)
-2)[Git](https://git-scm.com/)
+[NodeJS](https://nodejs.org/en/) и [Git](https://git-scm.com/)
 
 ### И выполнить следующие инструкции
 

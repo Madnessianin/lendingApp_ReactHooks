@@ -6,47 +6,54 @@ import './Statement.scss'
 import ApplicatnsForm from './Forms/ApplicatnsForm'
 import PersonalDataForm from './Forms/PersonalDataForm'
 import ConsentForm from './Forms/ConsentForm'
+import SuccessForm from './Forms/SuccessForm'
 
 
 const Statement = () => {
 
-    const [visibleModeFormOne, setVisibleModeFormOne] = useState(true)
-    const [visibleModeFormTwo, setVisibleModeFormTwo] = useState(false)
-    const [visibleModeFormThree, setVisibleModeFormThree] = useState(false)
-
+    const [visibleModeFormOne, setVisibleModeFormOne] = useState({visible: true, submit: false})
+    const [visibleModeFormTwo, setVisibleModeFormTwo] = useState({visible: false, submit: false})
+    const [visibleModeFormThree, setVisibleModeFormThree] = useState({visible: false, submit: false})
+    const [visibleModeFormSuccess, setVisibleModeFormSuccess] = useState(false)
+        
     const onSubmitFormOne = (data) => {
-        setVisibleModeFormOne(false)
-        setVisibleModeFormTwo(true)
+        setVisibleModeFormOne({visible: false, submit: true})
+        setVisibleModeFormTwo({visible: true, submit: false})
     }
     const onSubmitFormTwo = (data) => {
-        setVisibleModeFormTwo(false)
-        setVisibleModeFormThree(true)
+        setVisibleModeFormTwo({visible: false, submit: true})
+        setVisibleModeFormThree({visible: true, submit: false})
     }
     const onSubmitFormThree = (data) => {
-        setVisibleModeFormThree(false)
+        setVisibleModeFormThree({visible: false, submit: true})
+        setVisibleModeFormSuccess(true)
     }
-
     return (
         <div className="statemen">
             <StatementHeader />
-            <div className="statemen_inner">
+            {visibleModeFormSuccess 
+            ? <SuccessForm />
+            : <div className="statemen_inner">
                 <ApplicatnsForm title="Выбор заявителя"
                                 number="1"
                                 onSubmit={onSubmitFormOne}
-                                visibleMode={visibleModeFormOne}
+                                visibleMode={visibleModeFormOne.visible}
+                                submitMode={visibleModeFormOne.submit}
                                 height={'350px'} />
                 <PersonalDataForm title="Данные заявителя"
                                   number="2"
                                   onSubmit={onSubmitFormTwo}
-                                  visibleMode={visibleModeFormTwo}
+                                  visibleMode={visibleModeFormTwo.visible}
+                                  submitMode={visibleModeFormTwo.submit}
                                   height={'1050px'} />
                 <ConsentForm title="Согласие"
                              number="3"
                              onSubmit={onSubmitFormThree}
-                             visibleMode={visibleModeFormThree}
+                             visibleMode={visibleModeFormThree.visible}
+                             submitMode={visibleModeFormThree.submit}
                              height={'880px'} />
             </div>
-            
+            }
         </div>
     )
 }
@@ -74,5 +81,7 @@ const StatementHeader = () => {
         </div>
     )
 }
+
+
 
 export default Statement;

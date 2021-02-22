@@ -2,13 +2,8 @@ import React, { useEffect, useState } from 'react'
 import {CheckOutlined} from '@ant-design/icons'
 
 
-const Number = (props) => {
-    return (
-        <div className="number">{props.number}</div>
-    )
-}
 
-const Check = () => {
+export const Check = () => {
 
     const styleCheck = {
         fontSize: '30px',
@@ -20,28 +15,43 @@ const Check = () => {
     )
 }
 
+
 const dataForm = (Component) => (props) => {
+
+    const styleCheck = {
+        fontSize: '30px',
+        color: '#fff'
+    }
     
-    const [checkMode, setCheckMode] = useState(!props.visibleMode);
-
+    const [visibleMode, setVisibleMode] = useState(props.visibleMode);
+    
     useEffect(()=>{
-        setCheckMode(!props.visibleMode)
-    }, [!props.visibleMode])
+        setVisibleMode(props.visibleMode)
+    }, [props.visibleMode])
 
+    const [isSubmit, setIsSubmit] = useState(props.submitMode)
+    
+    useEffect(()=>{
+        setIsSubmit(props.submitMode)
+    }, [props.submitMode])
+    
     return (
-        <div className="dataform" style={checkMode ? { height: '80px'} : {height: `${props.height}`}}>
+        <div className="dataform" style={visibleMode ? {height: `${props.height}`} : { height: '80px'} }>
             <div className="dataform_icon">
-                {checkMode ? <Check /> : <Number number={props.number} />}
+                <div className={`number ${visibleMode || isSubmit ? "number--active" : ""}`}>{props.number}</div>
+                <div className={`check ${isSubmit ? 'check--active' : ''}`}><CheckOutlined style={styleCheck} /></div>      
             </div>
             <div className="dataform_inner">
-                <h4 className="dataform_title">{props.title}</h4>
-                {!checkMode ? <Component {...props} /> : null}
+                <h4 className={`dataform_title ${visibleMode || isSubmit ? "dataform_title--active" : ""}`}>{props.title}</h4>
+                {visibleMode ? <Component {...props} /> : null}
             </div>
         </div>
     )
         
 }
-    
+
+
+
 
 
 export default dataForm;

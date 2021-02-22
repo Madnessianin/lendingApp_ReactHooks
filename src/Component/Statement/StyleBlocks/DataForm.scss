@@ -1,3 +1,4 @@
+/* Общие элементы форм */
 .check,
 .number {
     display: flex;
@@ -5,27 +6,39 @@
     align-items: center;
     width: 50px;
     height: 50px;
-    
+    position: relative;
+    left: 0;
     border-radius: 50%;
 }
 
 .check {
+    position: relative;
+    top: -50px;
+    z-index: 1;
     background: #1BC400;
+    border: 1px solid #1BC400;
+
+    &--success {
+        top: 0;
+    }
+
+    &--active {
+        z-index: 3;
+    }
 }
 .number {
+    z-index: 2;
     font-size: 22px;
     line-height: 28px;
     font-weight: 400;
     color: #fff;
-    background: #0061D9;
-}
+    background: #BCC3CA;
+    transition: background .2s linear;
 
-.dataform {
-    margin-bottom: 24px;
-    padding: 16px 192px 0 16px;
-    background: #fff;
-    border-radius: 4px;
-    transition: height .5s linear;
+    &--active {
+        background: #0061D9;
+    }
+    
 }
 .point {
     height: 3px;
@@ -35,24 +48,73 @@
     border-radius: 50%;
     color: #000;
 }
-.dataform_icon {
+/* Обертки для форм */
+
+.dataform,
+.success {
+    margin-bottom: 24px;
+    padding: 16px 192px 0 16px;
+    background: #fff;
+    border-radius: 4px;
+    transition: height .5s linear;
+}
+
+.success {
+    margin-top: 40px;
+    padding-right: 96px;
+    width: 692px;
+
+    animation: surfacing 1s linear;
+}
+
+.dataform_icon,
+.success_icon {
     position: relative;
     top: 0;
     left: 0;
     z-index: 1;
 }
 
-.dataform_inner {
+.dataform_inner,
+.success_inner {
     position: relative;
-    top: -50px;
+    top: -100px;
     left: 82px;
     width: 88%;
 }
+.success_inner {
+    top: -50px;
+}
 
-.dataform_title {
+.dataform_title,
+.success_title {
     margin: 7px 0 24px 0;
     font-size: 21px;
     line-height: 32px;
     font-weight: 700;
+}
+
+.dataform_title {
+    color: #BCC3CA;
+
+    &--active {
+        color: #3B4256;
+    }
+}
+
+.success_title {
     color: #3B4256;
+}
+
+.success_text {
+    font-size: 18px;
+    line-height: 24px;
+    color: #3B4256;
+}
+
+.success_btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 24px;
 }

@@ -21,7 +21,7 @@ const ConsentForm = dataForm((props) => {
         fontSize: '18px',
         textAline: 'center'
     }
-
+    
        
     return (
         <div className="consent">
