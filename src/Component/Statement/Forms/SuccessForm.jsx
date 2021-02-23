@@ -1,7 +1,7 @@
 import { Button } from 'antd'
 import React from 'react'
 import {CheckOutlined} from '@ant-design/icons'
-import { styleBtnTwo, styleCheck } from '../../../StyleForAntd'
+import { styleMiddleBtn, styleCheck } from '../../../StyleForAntd'
 
 export const SuccessForm = (props) => {
    
@@ -20,8 +20,8 @@ export const SuccessForm = (props) => {
                 обращайтесь по телефону +7 (342) 123-45-67.
                 </p>
                 <div className="success_btn">
-                    <Button style={styleBtnTwo} type="primary">Вернуться в каталог</Button>
-                    <Button style={styleBtnTwo} >Перейти в личный кабинет</Button>
+                    <Button style={styleMiddleBtn} type="primary">Вернуться в каталог</Button>
+                    <Button style={styleMiddleBtn} >Перейти в личный кабинет</Button>
                 </div>
             </div>
         </div>

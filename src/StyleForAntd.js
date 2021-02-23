@@ -1,3 +1,4 @@
+/* Стилизация элементов главной страницы */
 
 export const styleHeder = {
     background: '#3684E2',
@@ -18,6 +19,8 @@ export const styleFooter = {
     textAlign: 'center' 
   }
 
+/* Стилизация элементов формы */
+
 export const radioStyle = {
     display: 'flex',
     alignItems: 'center',
@@ -25,23 +28,6 @@ export const radioStyle = {
     height: '80px',
     lineHeight: '24px'
 };
-
-export const styleBtnOne = {
-    width: '100%',
-    height: '48px',
-    fontSize: '18px',
-    textAline: 'center',
-    position: 'relative',
-    top: '-25px',
-    left: '0'
-}
-
-export const styleBtnTwo = {
-    width: '100%',
-    height: '48px',
-    fontSize: '18px',
-    textAline: 'center'
-}
 
 export const styleInput = {
     height: '48px',
@@ -52,3 +38,34 @@ export const styleCheck = {
     fontSize: '30px',
     color: '#fff'
 }
+
+/* Cтилизация кнопок */
+
+export const styleBtn = {
+    height: '48px',
+    fontSize: '18px',
+    textAline: 'center'
+}
+
+export const styleMiddleBtn = {
+    ...styleBtn,
+    minWidth: '230px'
+}
+
+export const styleDisabledLargeBtn = {
+    ...styleBtn,
+    width: '100%'
+}
+
+export const styleLargeBtn = {
+    ...styleDisabledLargeBtn,
+    background: '#0061D9'
+}
+
+export const styleLargeShiftBtn = {
+    ...styleLargeBtn,
+    position: 'relative',
+    top: '-25px',
+    left: '0'
+}
+

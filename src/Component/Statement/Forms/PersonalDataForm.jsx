@@ -1,6 +1,6 @@
 import { Form, Button,  Input, Divider,  InputNumber, Row, Col } from 'antd'
 import React from 'react'
-import { styleBtnTwo, styleInput } from '../../../StyleForAntd';
+import { styleInput, styleLargeBtn } from '../../../StyleForAntd';
 import dataForm from './DataForm'
 
 
@@ -161,7 +161,7 @@ const PersonalDataForm = dataForm((props) => {
 
                 <div className="personal_btn">
                     <Form.Item>
-                        <Button style={styleBtnTwo} type="primary" htmlType="submit">Продолжить</Button>
+                        <Button style={styleLargeBtn} type="primary" htmlType="submit">Продолжить</Button>
                     </Form.Item>
                 </div>              
                     

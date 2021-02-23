@@ -2,7 +2,7 @@ import { Form, Button, List, Checkbox } from 'antd'
 import React, { useState } from 'react'
 import dataForm from './DataForm'
 import icon from './../../../assets/img/icon.png'
-import { styleBtnTwo } from '../../../StyleForAntd'
+import { styleLargeBtn, styleDisabledLargeBtn } from '../../../StyleForAntd'
 
 const ConsentForm = dataForm((props) => {
 
@@ -43,10 +43,10 @@ const ConsentForm = dataForm((props) => {
                               
                 <Form.Item>
                     {checkedOne && checkedTwo 
-                    ? <Button style={styleBtnTwo} 
+                    ? <Button style={styleLargeBtn} 
                               type="primary" 
                               htmlType="submit">Продолжить</Button>
-                    : <Button style={styleBtnTwo} 
+                    : <Button style={styleDisabledLargeBtn} 
                               type="primary" 
                               htmlType="submit" 
                               disabled>Продолжить</Button>}

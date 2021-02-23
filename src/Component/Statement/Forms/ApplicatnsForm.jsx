@@ -1,6 +1,6 @@
 import { Form, Button, Radio } from 'antd'
 import React, { useState } from 'react'
-import { radioStyle, styleBtnOne } from '../../../StyleForAntd'
+import { radioStyle, styleLargeShiftBtn } from '../../../StyleForAntd'
 import dataForm from './DataForm'
 
 const ApplicatnsForm = dataForm((props) => {
@@ -29,7 +29,7 @@ const ApplicatnsForm = dataForm((props) => {
                     </Radio.Group>
                 </Form.Item>
                 <Form.Item>
-                    <Button style={styleBtnOne} type="primary" htmlType="submit">Продолжить</Button>
+                    <Button style={styleLargeShiftBtn} type="primary" htmlType="submit">Продолжить</Button>
                 </Form.Item>
             </Form>
         </div>
