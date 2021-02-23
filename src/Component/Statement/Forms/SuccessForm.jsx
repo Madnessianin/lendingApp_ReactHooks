@@ -1,23 +1,10 @@
-import { Form, Button, Radio, Divider } from 'antd'
-import React, { useState } from 'react'
-import { Check } from './DataForm'
+import { Button } from 'antd'
+import React from 'react'
 import {CheckOutlined} from '@ant-design/icons'
-
+import { styleBtnTwo, styleCheck } from '../../../StyleForAntd'
 
 export const SuccessForm = (props) => {
-    
-    const styleBtn = {
-        minWidth: '230px',
-        height: '48px',
-        fontSize: '18px',
-        textAline: 'center'
-    }
-
-    const styleCheck = {
-        fontSize: '30px',
-        color: '#fff'
-    }
-
+   
     return (
         <div className="success">
             <div className="success_icon">
@@ -33,8 +20,8 @@ export const SuccessForm = (props) => {
                 обращайтесь по телефону +7 (342) 123-45-67.
                 </p>
                 <div className="success_btn">
-                    <Button style={styleBtn} type="primary">Вернуться в каталог</Button>
-                    <Button style={styleBtn} >Перейти в личный кабинет</Button>
+                    <Button style={styleBtnTwo} type="primary">Вернуться в каталог</Button>
+                    <Button style={styleBtnTwo} >Перейти в личный кабинет</Button>
                 </div>
             </div>
         </div>

@@ -1,23 +1,13 @@
 import { Form, Button,  Input, Divider,  InputNumber, Row, Col } from 'antd'
 import React from 'react'
+import { styleBtnTwo, styleInput } from '../../../StyleForAntd';
 import dataForm from './DataForm'
 
 
 
 
 const PersonalDataForm = dataForm((props) => {
-    
-    const styleBtn = {
-        width: '100%',
-        height: '48px',
-        fontSize: '18px',
-        textAline: 'center'
-    }
-
-    const styleInput = {
-        height: '48px',
-        width: '100%'
-    }
+        
     const layout = {
         labelCol: {
             span: 24,
@@ -171,7 +161,7 @@ const PersonalDataForm = dataForm((props) => {
 
                 <div className="personal_btn">
                     <Form.Item>
-                        <Button style={styleBtn} type="primary" htmlType="submit">Продолжить</Button>
+                        <Button style={styleBtnTwo} type="primary" htmlType="submit">Продолжить</Button>
                     </Form.Item>
                 </div>              
                     

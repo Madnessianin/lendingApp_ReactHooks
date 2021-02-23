@@ -1,27 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import {CheckOutlined} from '@ant-design/icons'
-
-
-
-export const Check = () => {
-
-    const styleCheck = {
-        fontSize: '30px',
-        color: '#fff'
-    }
-
-    return (
-        <div className="check"><CheckOutlined style={styleCheck} /></div>
-    )
-}
-
+import { styleCheck } from '../../../StyleForAntd';
 
 const dataForm = (Component) => (props) => {
 
-    const styleCheck = {
-        fontSize: '30px',
-        color: '#fff'
-    }
     
     const [visibleMode, setVisibleMode] = useState(props.visibleMode);
     

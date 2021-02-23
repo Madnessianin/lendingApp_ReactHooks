@@ -1,5 +1,6 @@
 import { Form, Button, Radio } from 'antd'
 import React, { useState } from 'react'
+import { radioStyle, styleBtnOne } from '../../../StyleForAntd'
 import dataForm from './DataForm'
 
 const ApplicatnsForm = dataForm((props) => {
@@ -9,25 +10,7 @@ const ApplicatnsForm = dataForm((props) => {
     const onChange = (event) =>{
         setValue(event.target.value)
     }
-
-    const radioStyle = {
-        display: 'flex',
-        alignItems: 'center',
-        width: '560px',
-        height: '80px',
-        lineHeight: '24px'
-    };
-
-    const styleBtn = {
-        width: '100%',
-        height: '48px',
-        fontSize: '18px',
-        textAline: 'center',
-        position: 'relative',
-        top: '-25px',
-        left: '0'
-    }
-
+        
     return (
         <div className="apl">
             <Form onFinish={props.onSubmit} name="applicatns">
@@ -46,7 +29,7 @@ const ApplicatnsForm = dataForm((props) => {
                     </Radio.Group>
                 </Form.Item>
                 <Form.Item>
-                    <Button style={styleBtn} type="primary" htmlType="submit">Продолжить</Button>
+                    <Button style={styleBtnOne} type="primary" htmlType="submit">Продолжить</Button>
                 </Form.Item>
             </Form>
         </div>

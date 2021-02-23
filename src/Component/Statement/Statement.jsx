@@ -1,4 +1,4 @@
-import { Col, Input, Row, Form, Button, Radio } from 'antd'
+import { Col, Row } from 'antd'
 import React, { useState } from 'react'
 import header_logo from './../../assets/img/coatofarms.png'
 import './Statement.scss'

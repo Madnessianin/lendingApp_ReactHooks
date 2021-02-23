@@ -1,7 +1,8 @@
-import { Form, Button, List, Input, Checkbox, Divider } from 'antd'
+import { Form, Button, List, Checkbox } from 'antd'
 import React, { useState } from 'react'
 import dataForm from './DataForm'
 import icon from './../../../assets/img/icon.png'
+import { styleBtnTwo } from '../../../StyleForAntd'
 
 const ConsentForm = dataForm((props) => {
 
@@ -13,15 +14,7 @@ const ConsentForm = dataForm((props) => {
     }
     const onChangeTwo = () =>{
         setCheckedTwo(!checkedTwo)
-    }
-
-    const styleBtn = {
-        width: '100%',
-        height: '48px',
-        fontSize: '18px',
-        textAline: 'center'
-    }
-    
+    }   
        
     return (
         <div className="consent">
@@ -50,10 +43,10 @@ const ConsentForm = dataForm((props) => {
                               
                 <Form.Item>
                     {checkedOne && checkedTwo 
-                    ? <Button style={styleBtn} 
+                    ? <Button style={styleBtnTwo} 
                               type="primary" 
                               htmlType="submit">Продолжить</Button>
-                    : <Button style={styleBtn} 
+                    : <Button style={styleBtnTwo} 
                               type="primary" 
                               htmlType="submit" 
                               disabled>Продолжить</Button>}

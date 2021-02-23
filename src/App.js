@@ -6,27 +6,9 @@ import logo from './assets/img/Group.png'
 import icon from './assets/img/Vector.png'
 import { Redirect, Route, Switch } from 'react-router-dom';
 import Statement from './Component/Statement/Statement';
+import { styleBtnOut, styleFooter, styleHeder, styleLayout } from './StyleForAntd';
 
 const { Header, Content, Footer } = Layout;
-
-const styleHeder = {
-  background: '#3684E2',
-  color: '#fff',
-  padding: '0 12.5%',
-  height: '88px'
-}
-const styleLayout = {
-  minHeight: '100vh',
-  color: '#000',
-  background: '#E5E5E5'
-}
-const styleBtnOut = {
-  color: '#fff'
-}
-const styleFooter = {
-  background: '#E5E5E5',
-  textAlign: 'center' 
-}
 
 const App = () => {
   
