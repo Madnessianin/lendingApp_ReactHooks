@@ -5,7 +5,7 @@ import dataForm from './DataForm'
 
 const ApplicatnsForm = dataForm((props) => {
 
-    const [value, setValue] = useState(1)
+    const [value, setValue] = useState("individual")
 
     const onChange = (event) =>{
         setValue(event.target.value)
@@ -14,15 +14,15 @@ const ApplicatnsForm = dataForm((props) => {
     return (
         <div className="apl">
             <Form onFinish={props.onSubmit} name="applicatns">
-                <Form.Item>
+                <Form.Item name="person">
                     <Radio.Group onChange={onChange} size="large" value={value}>
                         <div className="apl_item">
-                            <Radio style={radioStyle} value={1}>
+                            <Radio style={radioStyle} value={"individual"}>
                                 <div className="apl_des"><strong>Константинопольский К.К.</strong><br /> Физическое лицо</div>
                             </Radio>
                         </div>
                         <div className="apl_item apl_item--last">
-                            <Radio style={radioStyle} value={2}>
+                            <Radio style={radioStyle} value={"entity"}>
                                 <div className="apl_des"><strong>Константинопольский К.К.</strong><br /> Юридическое лицо</div>
                             </Radio>
                         </div> 

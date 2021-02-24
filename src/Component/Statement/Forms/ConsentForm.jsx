@@ -9,33 +9,31 @@ const ConsentForm = dataForm((props) => {
     const [checkedOne, setChekedOne] = useState(false)
     const [checkedTwo, setCheckedTwo] = useState(false)
 
-    const onChangeOne = () =>{
-        setChekedOne(!checkedOne)
+    const onChangeOne = (e) =>{
+        setChekedOne(e.target.checked)
     }
-    const onChangeTwo = () =>{
-        setCheckedTwo(!checkedTwo)
+    const onChangeTwo = (e) =>{
+        setCheckedTwo(e.target.checked)
     }   
        
     return (
         <div className="consent">
             <MyList />         
             <Form onFinish={props.onSubmit} name="consent">
-                <div className="consent_item">
-                    <Form.Item name="confirmation">
-                        <Checkbox onChange={onChangeOne} 
-                                  checked={checkedOne}>
+                <Form.Item name="confirmation">
+                    <div className="consent_item">
+                        <Checkbox onChange={onChangeOne} >
                             <span className="consent_item_text">Я подтверждаю свое согласие со всеми вышеперечисленными пунктами</span>
                         </Checkbox>
-                    </Form.Item>
-                </div>
-                <div className="consent_item">
-                    <Form.Item name="notification">
-                        <Checkbox onChange={onChangeTwo} 
-                                  checked={checkedTwo}>
+                    </div>
+                </Form.Item>
+                <Form.Item name="notification">
+                    <div className="consent_item">
+                        <Checkbox onChange={onChangeTwo} >
                             <span className="consent_item_text">Я уведомлен о том, что результат будет получен в электронном виде</span>
                         </Checkbox>
-                    </Form.Item>
-                </div>
+                    </div>
+                </Form.Item>
                 <div className="consent_warning">
                     <img className="consent_warning_icon" src={icon} />
                     <span className="consent_item_text">Пожалуйста, еще раз внимательно проверьте все данные перед отправкой</span>
@@ -47,8 +45,7 @@ const ConsentForm = dataForm((props) => {
                               type="primary" 
                               htmlType="submit">Продолжить</Button>
                     : <Button style={styleDisabledLargeBtn} 
-                              type="primary" 
-                              htmlType="submit" 
+                              type="primary"  
                               disabled>Продолжить</Button>}
                 </Form.Item>
                 <div className="consent_footer">Нажимая кнопку «Отправить», вы соглашаетесь с 

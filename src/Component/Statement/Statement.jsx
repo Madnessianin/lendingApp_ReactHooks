@@ -1,5 +1,5 @@
 import { Col, Row } from 'antd'
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
 import header_logo from './../../assets/img/coatofarms.png'
 import './Statement.scss'
 
@@ -7,27 +7,35 @@ import ApplicatnsForm from './Forms/ApplicatnsForm'
 import PersonalDataForm from './Forms/PersonalDataForm'
 import ConsentForm from './Forms/ConsentForm'
 import SuccessForm from './Forms/SuccessForm'
+import { reducer, saveData, setVisibleMode } from './StatementReducer'
+
 
 
 const Statement = () => {
 
-    const [visibleModeFormOne, setVisibleModeFormOne] = useState({visible: true, submit: false})
-    const [visibleModeFormTwo, setVisibleModeFormTwo] = useState({visible: false, submit: false})
-    const [visibleModeFormThree, setVisibleModeFormThree] = useState({visible: false, submit: false})
+    const [stateFormOne, dispatchFormOne] = useReducer(reducer, {data: [], visible: true, submit: false})
+    const [stateFormTwo, dispatchFormTwo] = useReducer(reducer, {data: [], visible: false, submit: false})
+    const [stateFormThree, dispatchFormThree] = useReducer(reducer, {data: [], visible: true, submit: false})
+
+    //const [visibleModeFormOne, setVisibleModeFormOne] = useState({visible: true, submit: false})
+    //const [visibleModeFormTwo, setVisibleModeFormTwo] = useState({visible: false, submit: false})
+    //const [visibleModeFormThree, setVisibleModeFormThree] = useState({visible: false, submit: false})
     const [visibleModeFormSuccess, setVisibleModeFormSuccess] = useState(false)
         
     const onSubmitFormOne = (data) => {
-        setVisibleModeFormOne({visible: false, submit: true})
-        setVisibleModeFormTwo({visible: true, submit: false})
+        dispatchFormOne(saveData(data))
+        dispatchFormTwo(setVisibleMode(true))
     }
     const onSubmitFormTwo = (data) => {
-        setVisibleModeFormTwo({visible: false, submit: true})
-        setVisibleModeFormThree({visible: true, submit: false})
+        dispatchFormTwo(saveData(data))
+        dispatchFormThree(setVisibleMode(true))
     }
     const onSubmitFormThree = (data) => {
-        setVisibleModeFormThree({visible: false, submit: true})
+        dispatchFormThree(saveData(data))
         setVisibleModeFormSuccess(true)
     }
+
+    console.log(stateFormOne.data, stateFormTwo.data, stateFormThree.data)
     return (
         <div className="statemen">
             <StatementHeader />
@@ -37,20 +45,23 @@ const Statement = () => {
                 <ApplicatnsForm title="Выбор заявителя"
                                 number="1"
                                 onSubmit={onSubmitFormOne}
-                                visibleMode={visibleModeFormOne.visible}
-                                submitMode={visibleModeFormOne.submit}
+                                visibleMode={stateFormOne.visible}
+                                submitMode={stateFormOne.submit}
+                                data={stateFormOne.data}
                                 height={'350px'} />
                 <PersonalDataForm title="Данные заявителя"
                                   number="2"
                                   onSubmit={onSubmitFormTwo}
-                                  visibleMode={visibleModeFormTwo.visible}
-                                  submitMode={visibleModeFormTwo.submit}
+                                  visibleMode={stateFormTwo.visible}
+                                  submitMode={stateFormTwo.submit}
+                                  data={stateFormTwo.data}
                                   height={'1050px'} />
                 <ConsentForm title="Согласие"
                              number="3"
                              onSubmit={onSubmitFormThree}
-                             visibleMode={visibleModeFormThree.visible}
-                             submitMode={visibleModeFormThree.submit}
+                             visibleMode={stateFormThree.visible}
+                             submitMode={stateFormThree.submit}
+                             data={stateFormThree.data}
                              height={'880px'} />
             </div>
             }

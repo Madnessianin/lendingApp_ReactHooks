@@ -1,6 +1,7 @@
 /* Стилизация элементов главной страницы */
 
 export const styleHeder = {
+    
     background: '#3684E2',
     color: '#fff',
     padding: '0 12.5%',
