@@ -15,11 +15,8 @@ const Statement = () => {
 
     const [stateFormOne, dispatchFormOne] = useReducer(reducer, {data: [], visible: true, submit: false})
     const [stateFormTwo, dispatchFormTwo] = useReducer(reducer, {data: [], visible: false, submit: false})
-    const [stateFormThree, dispatchFormThree] = useReducer(reducer, {data: [], visible: true, submit: false})
-
-    //const [visibleModeFormOne, setVisibleModeFormOne] = useState({visible: true, submit: false})
-    //const [visibleModeFormTwo, setVisibleModeFormTwo] = useState({visible: false, submit: false})
-    //const [visibleModeFormThree, setVisibleModeFormThree] = useState({visible: false, submit: false})
+    const [stateFormThree, dispatchFormThree] = useReducer(reducer, {data: [], visible: false, submit: false})
+    
     const [visibleModeFormSuccess, setVisibleModeFormSuccess] = useState(false)
         
     const onSubmitFormOne = (data) => {
@@ -35,7 +32,7 @@ const Statement = () => {
         setVisibleModeFormSuccess(true)
     }
 
-    console.log(stateFormOne.data, stateFormTwo.data, stateFormThree.data)
+    
     return (
         <div className="statemen">
             <StatementHeader />
@@ -62,7 +59,7 @@ const Statement = () => {
                              visibleMode={stateFormThree.visible}
                              submitMode={stateFormThree.submit}
                              data={stateFormThree.data}
-                             height={'880px'} />
+                             height={'860px'} />
             </div>
             }
         </div>

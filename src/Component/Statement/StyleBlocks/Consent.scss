@@ -30,6 +30,8 @@
 }
 
 .consent_item {
+    position: relative;
+    top: -20px;
     cursor: pointer;
     background: #F5F5F7;
     border: 2px solid #F5F5F7;
@@ -40,6 +42,10 @@
     &:hover {
         border-color: #0061D9;
         background: #fff;
+    }
+
+    &--second {
+        top: -45px;
     }
 }
 
@@ -64,4 +70,9 @@
         text-decoration: none;
         color: #0061D9;
     }
+}
+
+.consent_wrapper {
+    position: relative;
+    top: -70px;
 }

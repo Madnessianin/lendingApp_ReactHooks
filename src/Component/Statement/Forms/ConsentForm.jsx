@@ -28,29 +28,32 @@ const ConsentForm = dataForm((props) => {
                     </div>
                 </Form.Item>
                 <Form.Item name="notification">
-                    <div className="consent_item">
+                    <div className="consent_item consent_item--second">
                         <Checkbox onChange={onChangeTwo} >
                             <span className="consent_item_text">Я уведомлен о том, что результат будет получен в электронном виде</span>
                         </Checkbox>
                     </div>
                 </Form.Item>
-                <div className="consent_warning">
-                    <img className="consent_warning_icon" src={icon} />
-                    <span className="consent_item_text">Пожалуйста, еще раз внимательно проверьте все данные перед отправкой</span>
+                <div className="consent_wrapper">
+                    <div className="consent_warning">
+                        <img className="consent_warning_icon" src={icon} />
+                        <span className="consent_item_text">Пожалуйста, еще раз внимательно проверьте все данные перед отправкой</span>
+                    </div>
+                                
+                    <Form.Item>
+                        {checkedOne && checkedTwo 
+                        ? <Button style={styleLargeBtn} 
+                                type="primary" 
+                                htmlType="submit">Продолжить</Button>
+                        : <Button style={styleDisabledLargeBtn} 
+                                type="primary"  
+                                disabled>Продолжить</Button>}
+                    </Form.Item>
+                    <div className="consent_footer">Нажимая кнопку «Отправить», вы соглашаетесь с 
+                    <a href="#">правилами хранения и обработки персональных данных</a>
+                    </div>
                 </div>
-                              
-                <Form.Item>
-                    {checkedOne && checkedTwo 
-                    ? <Button style={styleLargeBtn} 
-                              type="primary" 
-                              htmlType="submit">Продолжить</Button>
-                    : <Button style={styleDisabledLargeBtn} 
-                              type="primary"  
-                              disabled>Продолжить</Button>}
-                </Form.Item>
-                <div className="consent_footer">Нажимая кнопку «Отправить», вы соглашаетесь с 
-                <a href="#">правилами хранения и обработки персональных данных</a>
-                </div>
+                
             </Form>
         </div>
         
