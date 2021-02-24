@@ -31,6 +31,9 @@ export const radioStyle = {
 };
 
 export const styleInput = {
+    position: 'relative',
+    top: '-5px',
+    left: '0',
     height: '48px',
     width: '100%'
 }

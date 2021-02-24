@@ -10,12 +10,12 @@ const ApplicatnsForm = dataForm((props) => {
     const onChange = (event) =>{
         setValue(event.target.value)
     }
-        
+
     return (
         <div className="apl">
             <Form onFinish={props.onSubmit} name="applicatns">
-                <Form.Item name="person">
-                    <Radio.Group onChange={onChange} size="large" value={value}>
+                <Form.Item name="person" initialValue={props.data.person || value}>
+                    <Radio.Group onChange={onChange} size="large" value={value} >
                         <div className="apl_item">
                             <Radio style={radioStyle} value={"individual"}>
                                 <div className="apl_des"><strong>Константинопольский К.К.</strong><br /> Физическое лицо</div>

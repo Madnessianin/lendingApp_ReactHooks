@@ -5,7 +5,7 @@ import { styleCheck } from '../../../StyleForAntd';
 const dataForm = (Component) => (props) => {
    
     return (
-        <div className="dataform" style={props.visibleMode ? {height: `${props.height}`} : { height: '80px'} }>
+        <div className="dataform" onClick={props.onChange} style={props.visibleMode ? {height: `${props.height}`} : { height: '80px'} }>
             <div className="dataform_icon">
                 <div className={`number ${props.visibleMode || props.submitMode ? "number--active" : ""}`}>{props.number}</div>
                 <div className={`check ${props.submitMode ? 'check--active' : ''}`}><CheckOutlined style={styleCheck} /></div>      

@@ -20,19 +20,19 @@ const ConsentForm = dataForm((props) => {
         <div className="consent">
             <MyList />         
             <Form onFinish={props.onSubmit} name="consent">
-                <Form.Item name="confirmation">
-                    <div className="consent_item">
-                        <Checkbox onChange={onChangeOne} >
-                            <span className="consent_item_text">Я подтверждаю свое согласие со всеми вышеперечисленными пунктами</span>
-                        </Checkbox>
-                    </div>
-                </Form.Item>
-                <Form.Item name="notification">
-                    <div className="consent_item consent_item--second">
-                        <Checkbox onChange={onChangeTwo} >
-                            <span className="consent_item_text">Я уведомлен о том, что результат будет получен в электронном виде</span>
-                        </Checkbox>
-                    </div>
+                <Form.Item name="consent">
+                    <Checkbox.Group>
+                        <div className="consent_item">
+                            <Checkbox value={"confirmation"} onChange={onChangeOne} >
+                                <span className="consent_item_text">Я подтверждаю свое согласие со всеми вышеперечисленными пунктами</span>
+                            </Checkbox>
+                        </div>
+                        <div className="consent_item consent_item--second">
+                            <Checkbox value={"notification"} onChange={onChangeTwo} >
+                                <span className="consent_item_text">Я уведомлен о том, что результат будет получен в электронном виде</span>
+                            </Checkbox>
+                        </div>
+                    </Checkbox.Group>
                 </Form.Item>
                 <div className="consent_wrapper">
                     <div className="consent_warning">

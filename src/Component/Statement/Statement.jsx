@@ -7,7 +7,7 @@ import ApplicatnsForm from './Forms/ApplicatnsForm'
 import PersonalDataForm from './Forms/PersonalDataForm'
 import ConsentForm from './Forms/ConsentForm'
 import SuccessForm from './Forms/SuccessForm'
-import { reducer, saveData, setVisibleMode } from './StatementReducer'
+import { reducer, saveData, setSubmitMode, setVisibleMode } from './StatementReducer'
 
 
 
@@ -32,7 +32,24 @@ const Statement = () => {
         setVisibleModeFormSuccess(true)
     }
 
-    
+    const onChangeOne = () => {
+        if (stateFormOne.submit) {
+            dispatchFormOne(setSubmitMode(false))
+            dispatchFormOne(setVisibleMode(true))
+        }
+    }
+    const onChangeTwo = () => {
+        if (stateFormOne.submit) {
+            dispatchFormTwo(setSubmitMode(false))
+            dispatchFormTwo(setVisibleMode(true))
+        }
+    }
+    const onChangeThree = () => {
+        if (stateFormOne.submit) {
+            dispatchFormThree(setSubmitMode(false))
+            dispatchFormThree(setVisibleMode(true))
+        }
+    }
     return (
         <div className="statemen">
             <StatementHeader />
@@ -42,6 +59,7 @@ const Statement = () => {
                 <ApplicatnsForm title="Выбор заявителя"
                                 number="1"
                                 onSubmit={onSubmitFormOne}
+                                onChange={onChangeOne}
                                 visibleMode={stateFormOne.visible}
                                 submitMode={stateFormOne.submit}
                                 data={stateFormOne.data}
@@ -49,6 +67,7 @@ const Statement = () => {
                 <PersonalDataForm title="Данные заявителя"
                                   number="2"
                                   onSubmit={onSubmitFormTwo}
+                                  onChange={onChangeTwo}
                                   visibleMode={stateFormTwo.visible}
                                   submitMode={stateFormTwo.submit}
                                   data={stateFormTwo.data}
@@ -56,6 +75,7 @@ const Statement = () => {
                 <ConsentForm title="Согласие"
                              number="3"
                              onSubmit={onSubmitFormThree}
+                             onChange={onChangeThree}
                              visibleMode={stateFormThree.visible}
                              submitMode={stateFormThree.submit}
                              data={stateFormThree.data}
