@@ -1,11 +1,14 @@
 /* Стилизация элементов главной страницы */
 
 export const styleHeder = {
-    
+    position: 'sticky',
+    top: '-25px',
+    zIndex: '1000',
     background: '#3684E2',
     color: '#fff',
     padding: '0 12.5%',
-    height: '88px'
+    height: '88px',
+    width: '100%'
   }
 export const styleLayout = {
     minHeight: '100vh',

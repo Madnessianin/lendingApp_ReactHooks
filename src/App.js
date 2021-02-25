@@ -15,23 +15,25 @@ const App = () => {
   return (
     <Layout style={styleLayout}>
       <Header style={styleHeder}>
-        <Row>
-          <Col flex={2}>
-            <div className="header_item">
-              <img className="header_logo" src={logo} />
-              <h2 className="header_title">Услуги и сервисы Пермского края</h2>
-            </div>
-          </Col>
-          <Col flex={3}>
-            <div className="header_item header_item--right">
-              <img className="header_icon" src={icon} />
-              <h4 className="header_user_name">Константинопольский К.К</h4>
-              <div className="header_btn_out">
-                <Button size="large" style={styleBtnOut} type="link">Выйти</Button>
+          <div className="header_inner">
+          <Row>
+            <Col flex={2}>
+              <div className="header_item">
+                <img className="header_logo" src={logo} />
+                <h2 className="header_title">Услуги и сервисы Пермского края</h2>
               </div>
-            </div>
-          </Col>
-        </Row>
+            </Col>
+            <Col flex={3}>
+              <div className="header_item header_item--right">
+                <img className="header_icon" src={icon} />
+                <h4 className="header_user_name">Константинопольский К.К</h4>
+                <div className="header_btn_out">
+                  <Button size="large" style={styleBtnOut} type="link">Выйти</Button>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </div>
       </Header>
       <Content style={{ padding: '0 12.5%'}}>
         <div  className="content">
