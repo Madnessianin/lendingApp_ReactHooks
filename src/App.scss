@@ -1,56 +1,54 @@
 .layout {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 .header_item {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin: 10px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 10px 0;
 
-    &--right {
-        justify-content: flex-end;
-    }
-    
+  &--right {
+    justify-content: flex-end;
+  }
 }
 .header_title,
 .header_user_name {
-    margin: 0;
-    font-size: 18px;
-    line-height: 24px;
-    color: #fff;
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
 }
 
 .header_title {
-    padding-top: 7px;
-    margin-left: 21px;
-    font-weight: 700;
-    
+  padding-top: 7px;
+  margin-left: 21px;
+  font-weight: 700;
 }
 
 .header_user_name {
-    margin-left: 15px;
-    font-weight: 400;
+  margin-left: 15px;
+  font-weight: 400;
 }
 
-.header_btn_out { 
-    margin-top: 5px;
+.header_btn_out {
+  margin-top: 5px;
 
-    button {
-        font-size: 18px;
-        line-height: 24px;
-    }
+  button {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .header_icon {
-    opacity: .5;
+  opacity: 0.5;
 }
 
 .content {
-    padding-top: 100px;
+  padding-top: 100px;
 }
 
 .header_inner {
-    height: 70px;
-    position: sticky;
-    top: 0;
+  height: 70px;
+  position: sticky;
+  top: 0;
 }

@@ -1,121 +1,120 @@
 /* Общие элементы форм */
 .check,
 .number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    left: 0;
-    border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 0;
+  border-radius: 50%;
 }
 
 .check {
-    position: relative;
-    top: -50px;
-    z-index: 1;
-    background: #1BC400;
-    border: 1px solid #1BC400;
+  position: relative;
+  top: -50px;
+  z-index: 1;
+  background: #1bc400;
+  border: 1px solid #1bc400;
 
-    &--success {
-        top: 0;
-    }
+  &--success {
+    top: 0;
+  }
 
-    &--active {
-        z-index: 3;
-    }
+  &--active {
+    z-index: 3;
+  }
 }
 .number {
-    z-index: 2;
-    font-size: 22px;
-    line-height: 28px;
-    font-weight: 400;
-    color: #fff;
-    background: #BCC3CA;
-    transition: background .2s linear;
+  z-index: 2;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #fff;
+  background: #bcc3ca;
+  transition: background 0.2s linear;
 
-    &--active {
-        background: #0061D9;
-    }
-    
+  &--active {
+    background: #0061d9;
+  }
 }
 .point {
-    height: 3px;
-    width: 3px;
-    background: transparent;
-    border: 2px solid #000;
-    border-radius: 50%;
-    color: #000;
+  height: 3px;
+  width: 3px;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 50%;
+  color: #000;
 }
 /* Обертки для форм */
 
 .dataform,
 .success {
-    margin-bottom: 24px;
-    padding: 16px 192px 0 16px;
-    background: #fff;
-    border-radius: 4px;
-    transition: height .5s linear;
+  margin-bottom: 24px;
+  padding: 16px 192px 0 16px;
+  background: #fff;
+  border-radius: 4px;
+  transition: height 0.5s linear;
 }
 
 .success {
-    margin-top: 40px;
-    padding-right: 96px;
-    width: 692px;
+  margin-top: 40px;
+  padding-right: 96px;
+  width: 692px;
 
-    animation: surfacing 1s linear;
+  animation: surfacing 1s linear;
 }
 
 .dataform_icon,
 .success_icon {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .dataform_inner,
 .success_inner {
-    position: relative;
-    top: -100px;
-    left: 82px;
-    width: 88%;
+  position: relative;
+  top: -100px;
+  left: 82px;
+  width: 88%;
 }
 
 .success_inner {
-    top: -50px;
+  top: -50px;
 }
 
 .dataform_title,
 .success_title {
-    margin: 7px 0 24px 0;
-    font-size: 21px;
-    line-height: 32px;
-    font-weight: 700;
+  margin: 7px 0 24px 0;
+  font-size: 21px;
+  line-height: 32px;
+  font-weight: 700;
 }
 
 .dataform_title {
-    color: #BCC3CA;
+  color: #bcc3ca;
 
-    &--active {
-        color: #3B4256;
-    }
+  &--active {
+    color: #3b4256;
+  }
 }
 
 .success_title {
-    color: #3B4256;
+  color: #3b4256;
 }
 
 .success_text {
-    font-size: 18px;
-    line-height: 24px;
-    color: #3B4256;
+  font-size: 18px;
+  line-height: 24px;
+  color: #3b4256;
 }
 
 .success_btn {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 24px;
 }

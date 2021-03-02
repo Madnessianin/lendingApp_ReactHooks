@@ -1,54 +1,54 @@
 .personal_item {
-    position: relative;
-    
-    left: 0;
+  position: relative;
 
-    &--first {
-        top: 0;
-    }
-    &--second {
-        top: -10px;
-    }
-    &--third {
-        top: -20px;
-    }
-    &--four {
-        top: -30px;
-    }
-    &--five {
-        top: -40px;
-    }
+  left: 0;
+
+  &--first {
+    top: 0;
+  }
+  &--second {
+    top: -10px;
+  }
+  &--third {
+    top: -20px;
+  }
+  &--four {
+    top: -30px;
+  }
+  &--five {
+    top: -40px;
+  }
 }
 .personal_passport {
-    position: relative;
-    left: 0;
-    top: -30px;
+  position: relative;
+  left: 0;
+  top: -30px;
 }
 
 .personal_passport_item {
-    position: relative;
-    left: 0;
-    &--first {
-        top: -20px;
-    }
-    &--second {
-        top: -30px;
-    }
-    &--third {
-        top: -40px;
-    }
-    &--four {
-        top: -60px;
-    }
-    &--five {
-        top: -70px;
-    }
+  position: relative;
+  left: 0;
+  &--first {
+    top: -20px;
+  }
+  &--second {
+    top: -30px;
+  }
+  &--third {
+    top: -40px;
+  }
+  &--four {
+    top: -60px;
+  }
+  &--five {
+    top: -70px;
+  }
 }
 .personal_pasport_divider {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 .personal_btn {
-    position: relative;
-    left: 0;
-    top: -100px;
+  position: relative;
+  left: 0;
+  top: -100px;
 }
