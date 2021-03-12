@@ -1,6 +1,6 @@
 # Описание проэкта
 
-Проэкт собран с помощью стандартного метода сборки React приложений create-react-app и опубликован на хостинге [github pages](https://madnessianin.github.io/reactiveMediaTestTask/)
+Проэкт собран с помощью стандартного метода сборки React приложений create-react-app и опубликован на хостинге [github pages](https://madnessianin.github.io/lendingApp_ReactHooks/)
 
 ## Используемые технологии
 
