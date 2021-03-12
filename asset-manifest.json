@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/reactiveMediaTestTask/static/css/main.3dd8cb45.chunk.css",
-    "main.js": "/reactiveMediaTestTask/static/js/main.1e7a66d6.chunk.js",
-    "main.js.map": "/reactiveMediaTestTask/static/js/main.1e7a66d6.chunk.js.map",
-    "runtime-main.js": "/reactiveMediaTestTask/static/js/runtime-main.f4e49abf.js",
-    "runtime-main.js.map": "/reactiveMediaTestTask/static/js/runtime-main.f4e49abf.js.map",
-    "static/css/2.1e58ee36.chunk.css": "/reactiveMediaTestTask/static/css/2.1e58ee36.chunk.css",
-    "static/js/2.e59226e0.chunk.js": "/reactiveMediaTestTask/static/js/2.e59226e0.chunk.js",
-    "static/js/2.e59226e0.chunk.js.map": "/reactiveMediaTestTask/static/js/2.e59226e0.chunk.js.map",
-    "static/js/3.b4e93449.chunk.js": "/reactiveMediaTestTask/static/js/3.b4e93449.chunk.js",
-    "static/js/3.b4e93449.chunk.js.map": "/reactiveMediaTestTask/static/js/3.b4e93449.chunk.js.map",
-    "index.html": "/reactiveMediaTestTask/index.html",
-    "static/css/2.1e58ee36.chunk.css.map": "/reactiveMediaTestTask/static/css/2.1e58ee36.chunk.css.map",
-    "static/css/main.3dd8cb45.chunk.css.map": "/reactiveMediaTestTask/static/css/main.3dd8cb45.chunk.css.map",
-    "static/js/2.e59226e0.chunk.js.LICENSE.txt": "/reactiveMediaTestTask/static/js/2.e59226e0.chunk.js.LICENSE.txt"
+    "main.css": "/lendingApp_ReactHooks/static/css/main.3dd8cb45.chunk.css",
+    "main.js": "/lendingApp_ReactHooks/static/js/main.903ed55a.chunk.js",
+    "main.js.map": "/lendingApp_ReactHooks/static/js/main.903ed55a.chunk.js.map",
+    "runtime-main.js": "/lendingApp_ReactHooks/static/js/runtime-main.ab795244.js",
+    "runtime-main.js.map": "/lendingApp_ReactHooks/static/js/runtime-main.ab795244.js.map",
+    "static/css/2.1e58ee36.chunk.css": "/lendingApp_ReactHooks/static/css/2.1e58ee36.chunk.css",
+    "static/js/2.11561891.chunk.js": "/lendingApp_ReactHooks/static/js/2.11561891.chunk.js",
+    "static/js/2.11561891.chunk.js.map": "/lendingApp_ReactHooks/static/js/2.11561891.chunk.js.map",
+    "static/js/3.b9cdfc89.chunk.js": "/lendingApp_ReactHooks/static/js/3.b9cdfc89.chunk.js",
+    "static/js/3.b9cdfc89.chunk.js.map": "/lendingApp_ReactHooks/static/js/3.b9cdfc89.chunk.js.map",
+    "index.html": "/lendingApp_ReactHooks/index.html",
+    "static/css/2.1e58ee36.chunk.css.map": "/lendingApp_ReactHooks/static/css/2.1e58ee36.chunk.css.map",
+    "static/css/main.3dd8cb45.chunk.css.map": "/lendingApp_ReactHooks/static/css/main.3dd8cb45.chunk.css.map",
+    "static/js/2.11561891.chunk.js.LICENSE.txt": "/lendingApp_ReactHooks/static/js/2.11561891.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f4e49abf.js",
+    "static/js/runtime-main.ab795244.js",
     "static/css/2.1e58ee36.chunk.css",
-    "static/js/2.e59226e0.chunk.js",
+    "static/js/2.11561891.chunk.js",
     "static/css/main.3dd8cb45.chunk.css",
-    "static/js/main.1e7a66d6.chunk.js"
+    "static/js/main.903ed55a.chunk.js"
   ]
 }
